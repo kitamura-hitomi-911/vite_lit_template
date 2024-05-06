@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:lit/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "lit"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": { "browser": true, "node": true, "es6": true },
+  "rules": {
+    "@typescript-eslint/unbound-method": "off",
+    "lit/no-legacy-template-syntax": "error",
+    "lit/no-template-arrow": "warn"
+    // 個別に設定するESLintルールを記述
+  }
+}
